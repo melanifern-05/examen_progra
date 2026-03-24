@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ restaurante["Sabor Boliviano"] }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+</head>
+
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container nav">
+    <img src="{{ url_for('static', filename='images/logo_rest.png') }}" class="logo">
+
+    <div>
+        <h1 class="titulo-principal">SABOR BOLIVIANO</h1>
+       
+    </div>
+</div>
+</header>
+
+<!-- INFO RESTAURANTE -->
+<section class="section">
+    <h2>Ubicación</h2>
+    <p>{{ restaurante["direccion"] }}</p>
+        <img src="{{ url_for('static', filename='images/ubi.png') }}" alt="logo">
+</section>
+
+<!-- NUESTRA HISTORIA -->
+<section class="section">
+    <h2>Nuestra Historia</h2>
+
+    <div class="nosotros">
+        <img src="{{ url_for('static', filename='images/logo_rest.png') }}" alt="logo">
+
+        <div>
+            <p>
+                Desde nuestros humildes comienzos como un pequeño emprendimiento familiar, 
+                nuestro restaurante nació con la pasión de ofrecer comida tradicional boliviana 
+                preparada con amor y dedicación.
+            </p>
+
+            <p>
+                Con el paso del tiempo, fuimos creciendo gracias a la confianza de nuestros clientes, 
+                manteniendo siempre la calidad, el sabor casero y el compromiso de brindar una 
+                experiencia única en cada plato.
+            </p>
+
+            <p>
+                Hoy en día, seguimos siendo un negocio familiar que combina tradición, sabor y 
+                excelencia, llevando lo mejor de nuestra gastronomía a cada mesa.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- NUESTROS VALORES -->
+<section class="section morado">
+    <h2>Nuestros Valores</h2>
+
+    <ul>
+        <li>✔ Calidad en cada plato</li>
+        <li>✔ Atención al cliente</li>
+        <li>✔ Tradición boliviana</li>
+        <li>✔ Ingredientes frescos</li>
+    </ul>
+</section>
+
+<!-- MENÚ -->
+<section class="section">
+    <h2>Menú Tradicional</h2>
+
+    <div class="cards">
+        
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/sopa_mani.jpg') }}">
+            <h3>Sopa de Mani</h3>
+            <p>Preparado tradicionalmente con fideo y su pollito.</p>
+            <p><strong>Precio:</strong> {{ menu[0]["precio"] }} Bs</p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/silpancho.jpg') }}">
+            <h3>Silpancho</h3>
+            <p>Delicioso plato cochabambino con carne empanizada, arroz, papa y huevo.</p>
+            <p><strong>Precio:</strong> {{ menu[1]["precio"] }} Bs</p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/fricase.jpg') }}">
+            <h3>Fricase Paseño</h3>
+            <p>Pollo jugoso acompañado de papas doradas y ensalada fresca.</p>
+            <p><strong>Precio:</strong> {{ menu[2]["precio"] }} Bs</p>
+        </div>
+
+    
+    </div>
+</section>
+
+<!-- BEBIDAS -->
+<section class="section morado">
+    <h2>Bebidas Refrescantes</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/moconchinchi.jpg') }}">
+            <h3>Mocochinchi</h3>
+            <p>Bebida tradicional boliviana hecha con durazno deshidratado.</p>
+    
+            <p><strong>Precio:</strong> {{ menu[3]["precio"] }} Bs</p>
+        </div>
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/tumbo.avif') }}">
+            <h3>Jugo de Tumbo</h3>
+            <p>Refresco natural con un toque ácido y muy refrescante.</p>
+            <p><strong>Precio:</strong> {{ menu[4]["precio"] }} Bs</p>
+        </div>
+
+    </div>
+</section>
+<!-- POSTRES -->
+<section class="section">
+    <h2>Postres</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/flan.jpg') }}">
+            <h3>Flan Casero</h3>
+            <p>Suave y cremoso, preparado de manera tradicional con caramelo.</p>
+            <p><strong>Precio:</strong> {{ menu[5]["precio"] }} Bs</p>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>
